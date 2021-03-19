@@ -1,12 +1,21 @@
 {
   "extends": "../tsconfig.json",
-  "include": ["./**/*.ts"],
+  "include": [
+    "./**/*.ts"
+  ],
   "exclude": [],
   "compilerOptions": {
-    "types": ["cypress", "@percy/cypress"],
-    "lib": ["es2015", "dom"],
+    "types": [
+      "cypress",
+      "@percy/cypress"
+    ],
+    "lib": [
+      "es2015",
+      "dom"
+    ],
     "isolatedModules": false,
     "allowJs": true,
-    "noEmit": true
+    "noEmit": true,
+    "noImplicitAny": false // make typescript tolerate parameters without declaring their type
   }
 }
