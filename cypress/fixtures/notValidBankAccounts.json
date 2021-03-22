@@ -1,0 +1,62 @@
+[
+  {
+    "testName": "TC01 - Empty values",
+    "bankName": " ",
+    "routingNumber": " ",
+    "accountNumber": " "
+  },
+  {
+    "testName": "TC02 - Bank Name empty",
+    "bankName": " ",
+    "routingNumber": "123456789",
+    "accountNumber": "987654321"
+  },
+  {
+    "testName": "TC03 - Short Bank Name",
+    "bankName": "HSBC",
+    "routingNumber": "123456789",
+    "accountNumber": "987654321"
+  },
+  {
+    "testName": "TC04 - Empty Routing number",
+    "bankName": "CitiBanamex",
+    "routingNumber": " ",
+    "accountNumber": "987654321"
+  },
+  {
+    "testName": "TC05 - Short Routing number",
+    "bankName": "CitiBanamex",
+    "routingNumber": "12345678",
+    "accountNumber": "987654321"
+  },
+  {
+    "testName": "TC06 - Long Routing number",
+    "bankName": "CitiBanamex",
+    "routingNumber": "1234567891",
+    "accountNumber": "987654321"
+  },
+  {
+    "testName": "TC07 - Empty Account number",
+    "bankName": "CitiBanamex",
+    "routingNumber": "123456789",
+    "accountNumber": " "
+  },
+  {
+    "testName": "TC08 - Short Account number",
+    "bankName": "CitiBanamex",
+    "routingNumber": "123456789",
+    "accountNumber": "12345678"
+  },
+  {
+    "testName": "TC09 - Account number > 12",
+    "bankName": "CitiBanamex",
+    "routingNumber": "123456789",
+    "accountNumber": "1234567891123"
+  },
+  {
+    "testName": "TC10 - Not valid characters",
+    "bankName": "!&/(%**#!",
+    "routingNumber": "1$$   1/3",
+    "accountNumber": "🐛🐛🐛🐛🐛🐛"
+  }
+]

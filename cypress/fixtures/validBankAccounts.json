@@ -1,0 +1,32 @@
+[
+  {
+    "testName": "TC11 - Short values",
+    "bankName": "BANCO",
+    "routingNumber": "123456789",
+    "accountNumber": "123456789"
+  },
+  {
+    "testName": "TC12 - Bank Name 90 characters",
+    "bankName": "foobarbarfoofoobarbarfoofoobarbarfoofoobarbarfoofoobarbarfoofoobarbarfoofoobarbarfoofoobae",
+    "routingNumber": "123456789",
+    "accountNumber": "987654321"
+  },
+  {
+    "testName": "TC13 - Routing number with characters",
+    "bankName": "CitiBanamex",
+    "routingNumber": "ABCDEFGHI",
+    "accountNumber": "987654321"
+  },
+  {
+    "testName": "TC14 - Account number with 9 characters",
+    "bankName": "Bancomer",
+    "routingNumber": "123456789",
+    "accountNumber": "ABCDEFGHI"
+  },
+  {
+    "testName": "TC15 - Account number with 12 characters ",
+    "bankName": "Bancomer",
+    "routingNumber": "123456789",
+    "accountNumber": "ABCDEFGHIJKL"
+  }
+]
