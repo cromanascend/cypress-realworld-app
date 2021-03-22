@@ -140,5 +140,10 @@ declare namespace Cypress {
      * Logs in to AWS Cognito via Amplify Auth API bypassing UI using Cypress Task
      */
     loginByCognitoApi(username: string, password: string): Chainable<any>;
+
+    /**
+     * Create a bank account 
+     */
+    createBankAccount(bankName : string, routingNumber?: number, accountNumber: number): Chainable<any>;
   }
 }

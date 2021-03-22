@@ -5,6 +5,7 @@ const signinPath = "/signin";
 describe("Cypress Studio Demo", function () {
   before(function () {
     cy.visit(signinPath);
+    cy.login(usersdemo[2].username, usersdemo[2].password)
   });
   it("create new payment transaction", function () {
     usersdemo.forEach((userdemo) => {  
@@ -38,8 +39,9 @@ describe("Cypress Studio Demo", function () {
     cy.get('[data-test=sidenav-signout]').click();
     });
   });
-  it.skip("create new bank account", function () {
+  it.only("create new bank account", function () {
     // Extend test with Cypress Studio
+    cy.loginByApi(usersdemo[2].username, usersdemo[2].password)
     cy.get('[data-test=sidenav-bankaccounts]').click()
     cy.get('[data-test=bankaccount-new]').click()
     cy.get('#bankaccount-bankName-input').type('BANK OF AMERICA')

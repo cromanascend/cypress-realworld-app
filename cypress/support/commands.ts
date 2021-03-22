@@ -364,3 +364,9 @@ Cypress.Commands.add("loginByGoogleApi", () => {
     });
   });
 });
+Cypress.Commands.add("createBankAccount", (bankName, routingNumber, accountNumber) => {
+  cy.visit(Cypress.env("bankAccountUrl"));
+  cy.get('#bankaccount-bankName-input').type(bankName)
+  cy.get('#bankaccount-routingNumber-input').type(routingNumber)
+  cy.get('#bankaccount-accountNumber-input').type(accountNumber)
+});
