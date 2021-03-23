@@ -1,0 +1,6 @@
+[
+    { "vbankName": "Bancomer", "vroutingNumber": "111111111", "vaccountNumber": "111111111" },
+    { "vbankName": "Banorte",  "vroutingNumber": "222222222", "vaccountNumber": "222222222" },
+    { "vbankName": "Banamex",  "vroutingNumber": "333333333", "vaccountNumber": "333333333" },
+    { "vbankName": "BanRegio", "vroutingNumber": "444444444", "vaccountNumber": "444444444" }
+]

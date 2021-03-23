@@ -2,11 +2,14 @@ import { User } from "models";
 const usersdemo = require('../../fixtures/usersdemo.json')
 const signinPath = "/signin";
 
-describe("Cypress Studio Demo", function () {
+const BankAccounts = require('../../fixtures/bankacc.json')
+
+
+describe("TestSuite: Cypress Studio Demo", function () {
   before(function () {
     cy.visit(signinPath);
   });
-  it("create new payment transaction", function () {
+  it.skip("TC01: create new payment transaction", function () {
     usersdemo.forEach((userdemo) => {  
       cy.get("#username").type(userdemo.username);
       cy.get("#password").type(userdemo.password);
@@ -22,7 +25,7 @@ describe("Cypress Studio Demo", function () {
     cy.get('[data-test=sidenav-signout]').click();
     });
   });
-  it("create new request transaction", function () {
+  it.skip("TC02: create new request transaction", function () {
     usersdemo.forEach((userdemo) => {  
       cy.get("#username").type(userdemo.username);
       cy.get("#password").type(userdemo.password);
@@ -38,19 +41,33 @@ describe("Cypress Studio Demo", function () {
     cy.get('[data-test=sidenav-signout]').click();
     });
   });
-  it.skip("create new bank account", function () {
-    // Extend test with Cypress Studio
-    cy.get('[data-test=sidenav-bankaccounts]').click()
-    cy.get('[data-test=bankaccount-new]').click()
-    cy.get('#bankaccount-bankName-input').type('BANK OF AMERICA')
-    cy.get('#bankaccount-routingNumber-input').type('122105155')
-    cy.get('#bankaccount-accountNumber-input').type('123456789')
-    cy.get('[data-test=bankaccount-submit]').click()
-    cy.screenshot('bank account created')
-    cy.get('[data-test=sidenav-home]').click()
 
+
+  it("TC03: Create new bank account", function () {
+    usersdemo.forEach((userdemo) => {  
+      cy.get("#username").type(userdemo.username);
+      cy.get("#password").type(userdemo.password);
+      cy.get("[data-test=signin-submit]").click();
+
+
+    // Extend test with Cypress Studio
+    BankAccounts.forEach((BankAcc) => {
+         cy.get('[data-test=sidenav-bankaccounts]').click()
+         cy.get('[data-test=bankaccount-new]').click()
+         cy.get('#bankaccount-bankName-input').type(BankAcc.vbankName)
+         cy.get('#bankaccount-routingNumber-input').type(BankAcc.vroutingNumber)
+         cy.get('#bankaccount-accountNumber-input').type(BankAcc.vaccountNumber)
+         cy.get('[data-test=bankaccount-submit]').click()
+         cy.screenshot('bank account created')
+         cy.get('[data-test=sidenav-home]').click()
+    });  //bankaccounts
+    cy.get('[data-test=sidenav-signout]').click();
+    });  //usersdemo
   });
-  it.skip("delate a bank account", function () {
+
+ 
+
+  it.skip("TC04: Delate a bank account", function () {
     // Extend test with Cypress Studio
     cy.get('[data-test=sidenav-bankaccounts]').click()
     cy.get('[data-test=bankaccount-list-item-RskoB7r4Bic] > .MuiGrid-container > :nth-child(2) > [data-test=bankaccount-delete]').click()
