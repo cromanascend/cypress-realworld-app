@@ -225,7 +225,7 @@ ASCEND QA testing team for training purpose:
   <td align="center"><img src="https://avatars.githubusercontent.com/u/19216361?s=460&u=b26a1eeb08ff41e289ba65d78685b9b3fe9e305f&v=4" width="100px;" alt=""/><br /><sub><b>Cesar Roman</b></sub></a></td>
 
   
-<td align="center"><img src="https://avatars.githubusercontent.com/u/19216361?s=460&u=b26a1eeb08ff41e289ba65d78685b9b3fe9e305f&v=4" width="100px;" alt=""/><br /><sub><b>Sandra Monares</b></sub></a></td>
+<td align="center"><img src="https://avatars.githubusercontent.com/u/79932903?s=400&u=fe52b0f4ccf81366626ca4215f2a09264dc8c2bd&v=4" width="100px;" alt=""/><br /><sub><b>Sandra Monares</b></sub></a></td>
 
 
   <!-- Team ASCEND; please add your name and a picture (optional) -->
